@@ -55,5 +55,6 @@ public class AnimalDataAccessService implements Animaldao {
     public int updateAnimalById(UUID id, Animal animal) {
         String sql = "UPDATE animal SET name = ?, age = ?, gender = ?, species = ?, colour = ?, breed = ?, neutered = ?, microChipped = ?, healthConditions = ?, paired = ?, status = ?, imgUrl = ? WHERE id = ?";
         int newAnimal = jdbcTemplate.update(sql, animal.getName(), animal.getAge(), animal.getGender(), animal.getSpecies(), animal.getColour(), animal.getBreed(), animal.getNeutered(), animal.getMicroChipped(), animal.getHealthConditions(), animal.getPaired(), animal.getStatus(), animal.getImgUrl(), id);
-        return newAnimal;    }
+        return newAnimal;
+    }
 }
