@@ -4,6 +4,5 @@ app:
     username: postgres
     password: password1234
     pool-size: 30
-server:
-  port: 8080
+
 
