@@ -1,8 +1,9 @@
+
 app:
   datasource:
-    url: ${JDBC_DATABASE_URL}
-    username: ${JDBC_DATABASE_USERNAME}
-    password: ${JDBC_DATABASE_PASSWORD}
+    jdbc-url: jdbc:postgresql://localhost:5432/springbootdb
+    username: postgres
+    password: password1234
     pool-size: 30
 
 
