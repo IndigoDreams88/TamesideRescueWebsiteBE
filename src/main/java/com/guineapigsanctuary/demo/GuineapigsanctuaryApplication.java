@@ -22,7 +22,7 @@ public class GuineapigsanctuaryApplication {
 		public void addCorsMappings(CorsRegistry registry) {
 
 			registry.addMapping("/api/**")
-					.allowedOrigins("https://guineapig-sanctuary.herokuapp.com/api/v1/animal")
+					.allowedOrigins("https://guineapig-sanctuary.herokuapp.com")
 					.allowedMethods("PUT", "DELETE", "GET", "POST")
 					.allowedHeaders("header1", "header2", "header3")
 					.exposedHeaders("header1", "header2")
