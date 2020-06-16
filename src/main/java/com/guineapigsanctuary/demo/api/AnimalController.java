@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.UUID;
 
 @RequestMapping("api/v1/animal")
-@CrossOrigin(origins = "https://guineapig-sanctuary.herokuapp.com/", maxAge = 3600)
 @RestController
 public class AnimalController {
 
