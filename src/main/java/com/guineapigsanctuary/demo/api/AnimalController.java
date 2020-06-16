@@ -34,7 +34,7 @@ public class AnimalController {
        return animalService.getAllAnimals();
     }
 
-
+    @CrossOrigin
     @GetMapping(path="{id}")
     public Animal getAnimalbyId(@PathVariable("id") UUID id) {
        return  animalService.getAnimalById(id)
