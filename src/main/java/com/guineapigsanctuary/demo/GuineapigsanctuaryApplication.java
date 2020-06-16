@@ -18,7 +18,7 @@ public class GuineapigsanctuaryApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/api/v1/animal").allowedOrigins("http://localhost:8080");
+				registry.addMapping("/api/v1/animal").allowedOrigins("http://localhost:3000");
 			}
 		};
 	}
