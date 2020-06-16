@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.UUID;
 
-@CrossOrigin
+
 @RequestMapping("api/v1/animal")
 @RestController
 public class AnimalController {
@@ -28,13 +28,13 @@ public class AnimalController {
         animalService.insertAnimal(animal);
     }
 
-
+    @CrossOrigin
     @GetMapping
     public List<Animal> getAllAnimals() {
        return animalService.getAllAnimals();
     }
 
-
+    @CrossOrigin
     @GetMapping(path="{id}")
     public Animal getAnimalbyId(@PathVariable("id") UUID id) {
        return  animalService.getAnimalById(id)
