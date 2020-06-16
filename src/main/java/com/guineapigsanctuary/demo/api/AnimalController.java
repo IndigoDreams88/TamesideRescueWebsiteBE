@@ -26,6 +26,7 @@ public class AnimalController {
         animalService.insertAnimal(animal);
     }
 
+    @CrossOrigin
     @GetMapping
     public List<Animal> getAllAnimals() {
        return animalService.getAllAnimals();
