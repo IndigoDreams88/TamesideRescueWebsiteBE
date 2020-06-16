@@ -34,8 +34,8 @@ public class AnimalController {
        return animalService.getAllAnimals();
     }
 
-    @CrossOrigin
-    @GetMapping(path="{id}")
+    @CrossOrigin("https://guineapig-sanctuary.herokuapp.com/api/v1/animal")
+    @GetMapping(path="/{id}")
     public Animal getAnimalbyId(@PathVariable("id") UUID id) {
        return  animalService.getAnimalById(id)
                 .orElse(null);
