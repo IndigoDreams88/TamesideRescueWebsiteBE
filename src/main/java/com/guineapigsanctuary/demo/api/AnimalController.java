@@ -21,6 +21,7 @@ public class AnimalController {
         this.animalService = animalService;
     }
 
+    @CrossOrigin
     @PostMapping
     public void addAnimal(@Valid @NotNull @RequestBody Animal animal) {
         animalService.insertAnimal(animal);
@@ -32,17 +33,19 @@ public class AnimalController {
        return animalService.getAllAnimals();
     }
 
+    @CrossOrigin
     @GetMapping(path="{id}")
     public Animal getAnimalbyId(@PathVariable("id") UUID id) {
        return  animalService.getAnimalById(id)
                 .orElse(null);
     }
 
+    @CrossOrigin
     @DeleteMapping(path="{id}")
     public void deleteAnimalById(@PathVariable("id") UUID id) {
         animalService.deleteAnimal(id);
     }
-
+    @CrossOrigin
     @PutMapping(path="{id}")
     public void updateAnimal(@PathVariable("id") UUID id, @Valid @NotNull @RequestBody Animal animalToUpdate) {
         animalService.updateAnimal(id, animalToUpdate);
