@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.UUID;
 
-
+@CrossOrigin("https://guineapig-sanctuary.herokuapp.com/")
 @RequestMapping("api/v1/animal")
 @RestController
 public class AnimalController {
