@@ -28,25 +28,24 @@ public class AnimalController {
         animalService.insertAnimal(animal);
     }
 
-    @CrossOrigin
     @GetMapping
     public List<Animal> getAllAnimals() {
        return animalService.getAllAnimals();
     }
 
-    @GetMapping(path="{id}")
+    @GetMapping(path="/{id}")
     public Animal getAnimalbyId(@PathVariable("id") UUID id) {
        return  animalService.getAnimalById(id)
                 .orElse(null);
     }
 
 
-    @DeleteMapping(path="{id}")
+    @DeleteMapping(path="/{id}")
     public void deleteAnimalById(@PathVariable("id") UUID id) {
         animalService.deleteAnimal(id);
     }
 
-    @PutMapping(path="{id}")
+    @PutMapping(path="/{id}")
     public void updateAnimal(@PathVariable("id") UUID id, @Valid @NotNull @RequestBody Animal animalToUpdate) {
         animalService.updateAnimal(id, animalToUpdate);
     }
